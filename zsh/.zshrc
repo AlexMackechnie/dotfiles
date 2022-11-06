@@ -16,6 +16,7 @@ alias s='cd ~/home/dev/scratchpad'
 alias h='cd ~/home'
 alias py='cd ~/home/dev/scratchpad/lang/python'
 alias z='vim ~/.zshrc'
+alias cr='cd $(git rev-parse --show-toplevel)'
 
 # ---------------- ZSHRC ---------------- #
 
@@ -48,18 +49,18 @@ alias gpl="git pull origin "
 # ---------------- VENV ---------------- #
 
 export VIRTUAL_ENV_DISABLE_PROMPT=
-alias cv="python3 -m venv .venv"
-alias av=". .venv/bin/activate"
+alias cv="python3 -m venv venv"
+alias av=". venv/bin/activate"
 alias dv="deactivate"
-alias rv="rm -rf .venv"
+alias rv="rm -rf venv"
 
 function cd() {
   builtin cd "$@"
 
   if [[ -z "$VIRTUAL_ENV" ]] ; then
     ## If env folder is found then activate the vitualenv
-      if [[ -d ./.venv ]] ; then
-        source ./.venv/bin/activate
+      if [[ -d ./venv ]] ; then
+        source ./venv/bin/activate
       fi
   else
     ## check the current folder belong to earlier VIRTUAL_ENV folder
