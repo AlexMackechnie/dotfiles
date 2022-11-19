@@ -11,4 +11,6 @@ nnoremap("<C-K>", "<C-W>k")
 nnoremap("<C-L>", "<C-W>l")
 nnoremap("<leader>fh", "<cmd>vertical resize +5<cr>")
 nnoremap("<leader>t", "<cmd>NvimTreeToggle<cr>")
+nnoremap("<leader>mm", function() require("harpoon.mark").add_file() end)
+nnoremap("<leader>hh", function() require("harpoon.ui").toggle_quick_menu() end)
 
