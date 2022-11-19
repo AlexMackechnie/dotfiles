@@ -10,4 +10,5 @@ nnoremap("<C-J>", "<C-W>j")
 nnoremap("<C-K>", "<C-W>k")
 nnoremap("<C-L>", "<C-W>l")
 nnoremap("<leader>fh", "<cmd>vertical resize +5<cr>")
+nnoremap("<leader>t", "<cmd>NvimTreeToggle<cr>")
 
