@@ -11,12 +11,14 @@ alias l='ls -lrt'
 alias la='ls -lart'
 alias home='cd ~/home'
 alias dev='cd ~/home/dev'
+alias p='cd ~/home/personal'
 alias c='clear'
 alias s='cd ~/home/dev/scratchpad'
 alias h='cd ~/home'
 alias py='cd ~/home/dev/scratchpad/lang/python'
 alias z='vim ~/.zshrc'
 alias cr='cd $(git rev-parse --show-toplevel)'
+alias who='aws sts get-caller-identity --no-cli-pager'
 
 # ---------------- ZSHRC ---------------- #
 
