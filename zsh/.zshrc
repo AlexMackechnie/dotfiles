@@ -19,6 +19,7 @@ alias py='cd ~/home/dev/scratchpad/lang/python'
 alias z='vim ~/.zshrc'
 alias cr='cd $(git rev-parse --show-toplevel)'
 alias who='aws sts get-caller-identity --no-cli-pager'
+alias t='cd ~/home/tmp'
 
 # ---------------- ZSHRC ---------------- #
 
@@ -74,5 +75,9 @@ function cd() {
       fi
   fi
 }
+
+# ---------------- ASDF ---------------- #
+
+. ~/.asdf/plugins/java/set-java-home.zsh
 
 

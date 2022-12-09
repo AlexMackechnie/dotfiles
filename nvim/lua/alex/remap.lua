@@ -18,3 +18,8 @@ nnoremap("<leader>1", function() require("harpoon.ui").nav_file(1) end, silent)
 nnoremap("<leader>2", function() require("harpoon.ui").nav_file(2) end, silent)
 nnoremap("<leader>3", function() require("harpoon.ui").nav_file(3) end, silent)
 nnoremap("<leader>4", function() require("harpoon.ui").nav_file(4) end, silent)
+
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+nnoremap("n", "nzzzv")
+nnoremap("N", "Nzzzv")
