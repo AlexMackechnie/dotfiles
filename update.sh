@@ -23,16 +23,25 @@ function update_tmux {
     echo "Update Complete:  tmux ✅"
 }
 
+function update_zsh {
+    echo "Updating...       zsh  🚧"
+    cp zsh/.zshrc ~/.zshrc
+    echo "Update Complete:  zsh  ✅"
+}
+
 if [ "${TARGET}" = "nvim" ]; then
     update_nvim
 elif [ $TARGET = "brew" ]; then
     update_brew
 elif [ $TARGET = "tmux" ]; then
     update_tmux
+elif [ $TARGET = "zsh" ]; then
+    update_zsh
 elif [ $TARGET = "all" ]; then
     update_nvim
     update_brew
     update_tmux
+    update_zsh
 else
     echo "No arg specified"
 fi
