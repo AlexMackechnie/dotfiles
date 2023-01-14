@@ -29,6 +29,12 @@ function update_zsh {
     echo "Update Complete:  zsh  ✅"
 }
 
+function update_asdf {
+    echo "Updating...       asdf 🚧"
+    sh asdf/plugins.sh
+    echo "Update Complete:  asdf ✅"
+}
+
 if [ "${TARGET}" = "nvim" ]; then
     update_nvim
 elif [ $TARGET = "brew" ]; then
@@ -37,11 +43,14 @@ elif [ $TARGET = "tmux" ]; then
     update_tmux
 elif [ $TARGET = "zsh" ]; then
     update_zsh
+elif [ $TARGET = "asdf" ]; then
+    update_asdf
 elif [ $TARGET = "all" ]; then
     update_nvim
     update_brew
     update_tmux
     update_zsh
+    update_asdf
 else
     echo "No arg specified"
 fi
