@@ -1,8 +1,12 @@
+# ---------------- ZSH ---------------- #
+
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="robbyrussell"
 
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+
+PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$fg[cyan]%}%c%{$reset_color%} "
 
 # ---------------- ALIAS ---------------- #
 
@@ -94,3 +98,4 @@ asdf_shell_java() {
   asdf_update_java_home
 }
 
+DISABLE_UNTRACKED_FILES_DIRTY="true"
