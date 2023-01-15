@@ -483,4 +483,5 @@ require("nvim-tree").setup({
 })
 
 vim.keymap.set('n', "<leader>t", "<cmd>NvimTreeToggle<cr>")
+vim.keymap.set('n', "<leader>gt", "<cmd>GBrowse<cr>")
 
