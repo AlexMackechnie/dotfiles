@@ -31,7 +31,7 @@ alias zs='source ~/.zshrc'
 
 # ---------------- PATH ---------------- #
 
-export PATH=/opt/homebrew/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:$HOME/bin:/usr/local/bin:$PATH:$HOME/home/bin
 
 # ---------------- ASDF ---------------- #
 
@@ -97,5 +97,9 @@ asdf_shell_java() {
   asdf shell java $1 
   asdf_update_java_home
 }
+# ---------------- DNS ---------------- #
+
+export ROOT_NS_IPS=("198.41.0.4" "199.9.14.201" "192.33.4.12")
+export ROOT_NS_NAMES=("a.root-servers.net" "b.root-servers.net" "c.root-servers.net")
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
