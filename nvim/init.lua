@@ -157,6 +157,8 @@ vim.keymap.set('n', "<C-L>", "<C-W>l")
 vim.keymap.set('n', "j", "gj")
 vim.keymap.set('n', "k", "gk")
 
+vim.keymap.set('v', "<leader>y", "\"*y")
+
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })

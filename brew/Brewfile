@@ -1,5 +1,7 @@
 tap "turbot/tap"
+tap "aws/tap"
 brew "asdf"
+brew "aws-sam-cli"
 brew "cfn-lint"
 brew "docker"
 brew "fzf"
