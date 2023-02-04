@@ -74,6 +74,8 @@ require('packer').startup(function(use)
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
+  use { 'ThePrimeagen/harpoon' }
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then
@@ -186,8 +188,10 @@ require('lualine').setup {
     theme = 'onedark',
     component_separators = '|',
     section_separators = '',
+    path = 3
   },
 }
+
 
 -- Enable Comment.nvim
 require('Comment').setup()
@@ -487,3 +491,15 @@ require("nvim-tree").setup({
 vim.keymap.set('n', "<leader>t", "<cmd>NvimTreeToggle<cr>")
 vim.keymap.set('n', "<leader>gt", "<cmd>GBrowse<cr>")
 
+-- Harpoon
+
+vim.keymap.set("n", "<leader>mm", function() require("harpoon.mark").add_file() end)
+vim.keymap.set("n", "<leader>hh", function() require("harpoon.ui").toggle_quick_menu() end)
+vim.keymap.set("n", "<leader>1", function() require("harpoon.ui").nav_file(1) end, silent)
+vim.keymap.set("n", "<leader>2", function() require("harpoon.ui").nav_file(2) end, silent)
+vim.keymap.set("n", "<leader>3", function() require("harpoon.ui").nav_file(3) end, silent)
+vim.keymap.set("n", "<leader>4", function() require("harpoon.ui").nav_file(4) end, silent)
+vim.keymap.set("n", "<leader>5", function() require("harpoon.ui").nav_file(5) end, silent)
+vim.keymap.set("n", "<leader>6", function() require("harpoon.ui").nav_file(6) end, silent)
+vim.keymap.set("n", "<leader>7", function() require("harpoon.ui").nav_file(7) end, silent)
+vim.keymap.set("n", "<leader>8", function() require("harpoon.ui").nav_file(8) end, silent)
