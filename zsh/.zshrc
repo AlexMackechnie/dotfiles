@@ -40,7 +40,7 @@ export PATH=/opt/homebrew/bin:$HOME/bin:/usr/local/bin:$PATH:$HOME/home/bin
 # ---------------- PIP ---------------- #
 
 # Note: The top of the hierarchy isn't necessarily what you've `pip installed`. You install dependencies in a flat structure; this shows how they depend on each other.
-alias tree='pipdeptree --graph-output png | open -a Preview.app -f'
+alias piptree='pipdeptree --graph-output png | open -a Preview.app -f'
 
 # ---------------- NVIM ---------------- #
 
