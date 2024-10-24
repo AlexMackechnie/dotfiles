@@ -18,6 +18,7 @@ function update_brew {
 
 function update_tmux {
     echo "Updating...       tmux 🚧"
+    mkdir ~/.config/tmux
     cp tmux/.tmux.conf ~/.tmux.conf
     cp -pr tmux/bin/ ~/.config/tmux/bin/
     echo "Update Complete:  tmux ✅"
