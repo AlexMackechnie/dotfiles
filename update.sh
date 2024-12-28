@@ -30,6 +30,12 @@ function update_asdf {
     echo "Update Complete:  asdf ✅"
 }
 
+function update_aerospace {
+    echo "Updating...       aerospace 🚧"
+    cp aerospace/aerospace.toml ~/.aerospace.toml
+    echo "Update Complete:  asdf ✅"
+}
+
 if [ $TARGET = "brew" ]; then
     update_brew
 elif [ $TARGET = "tmux" ]; then
@@ -38,11 +44,14 @@ elif [ $TARGET = "zsh" ]; then
     update_zsh
 elif [ $TARGET = "asdf" ]; then
     update_asdf
+elif [ $TARGET = "aerospace" ]; then
+    update_aerospace
 elif [ $TARGET = "all" ]; then
     update_brew
     update_tmux
     update_zsh
     update_asdf
+    update_aerospace
 else
     echo "No arg specified"
 fi
