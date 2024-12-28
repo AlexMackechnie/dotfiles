@@ -24,6 +24,7 @@ alias z='vim ~/.zshrc'
 alias cr='cd $(git rev-parse --show-toplevel)'
 alias who='aws sts get-caller-identity --no-cli-pager'
 alias t='cd ~/home/tmp'
+alias e='exit'
 
 # ---------------- ZSHRC ---------------- #
 
@@ -41,6 +42,10 @@ export PATH=/opt/homebrew/bin:$HOME/bin:/usr/local/bin:$PATH:$HOME/home/bin
 
 # Note: The top of the hierarchy isn't necessarily what you've `pip installed`. You install dependencies in a flat structure; this shows how they depend on each other.
 alias piptree='pipdeptree --graph-output png | open -a Preview.app -f'
+
+# ---------------- JAVA ---------------- #
+
+alias gw='./gradlew'
 
 # ---------------- NVIM ---------------- #
 
@@ -97,6 +102,7 @@ asdf_shell_java() {
   asdf shell java $1 
   asdf_update_java_home
 }
+
 # ---------------- DNS ---------------- #
 
 export ROOT_NS_IPS=("198.41.0.4" "199.9.14.201" "192.33.4.12")

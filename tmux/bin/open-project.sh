@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJECT_LIST=("${HOME}/home/dev" "${HOME}/home/personal")
+PROJECT_LIST=("${HOME}/home/dev" "${HOME}/home/personal" "${HOME}/.config")
 
 SESSION_DIR=`for project in ${PROJECT_LIST[@]}
 do

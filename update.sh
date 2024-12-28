@@ -4,15 +4,9 @@ TARGET=${1}
 
 echo ${TARGET}
 
-function update_nvim {
-    echo "Updating...       nvim 🚧"
-    cp -r nvim/* ~/.config/nvim
-    echo "Update Complete:  nvim ✅"
-}
-
 function update_brew {
     echo "Updating...       brew 🚧"
-    cp brew/Brewfile ~/Brewfile
+    brew bundle install --file=brew/Brewfile
     echo "Update Complete:  brew ✅"
 }
 
@@ -36,9 +30,7 @@ function update_asdf {
     echo "Update Complete:  asdf ✅"
 }
 
-if [ "${TARGET}" = "nvim" ]; then
-    update_nvim
-elif [ $TARGET = "brew" ]; then
+if [ $TARGET = "brew" ]; then
     update_brew
 elif [ $TARGET = "tmux" ]; then
     update_tmux
@@ -47,7 +39,6 @@ elif [ $TARGET = "zsh" ]; then
 elif [ $TARGET = "asdf" ]; then
     update_asdf
 elif [ $TARGET = "all" ]; then
-    update_nvim
     update_brew
     update_tmux
     update_zsh
